@@ -8,20 +8,31 @@
 </head>
 <body>
 
-  <div class="overlay">
-    <h1>🏆 ROV E-SPORT รอบคัดเลือก</h1>
+  <!-- Header -->
+  <header>
+    <img src="images/S__15613978.jpg" alt="ROV Tournament" class="header-img">
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>การแข่งขัน ROV ทั้ง 8 คู่</h1>
     <div class="button-group">
-      <button onclick="openPopup('https://www.youtube.com/embed/dQw4w9WgXcQ')">แมตช์ 1: Tangman vs PE E-sports</button>
-      <button onclick="openPopup('https://www.youtube.com/embed/ScMzIvxBSi4')">แมตช์ 2: @ไก่ทอด vs เบนโปรทั้งทีม</button>
-      <button onclick="openPopup('https://www.youtube.com/embed/tgbNymZ7vqY')">แมตช์ 3: Secret TELEtubbies vs ผีมือปืน</button>
+      <button onclick="openPopup('match1')">แมตช์ 1</button>
+      <button onclick="openPopup('match2')">แมตช์ 2</button>
+      <button onclick="openPopup('match3')">แมตช์ 3</button>
+      <button onclick="openPopup('match4')">แมตช์ 4</button>
+      <button onclick="openPopup('match5')">แมตช์ 5</button>
+      <button onclick="openPopup('match6')">แมตช์ 6</button>
+      <button onclick="openPopup('match7')">แมตช์ 7</button>
+      <button onclick="openPopup('match8')">แมตช์ 8</button>
     </div>
-  </div>
+  </main>
 
   <!-- Popup Modal -->
   <div id="videoModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closePopup()">&times;</span>
-      <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+      <div id="videoContainer"></div>
     </div>
   </div>
 
