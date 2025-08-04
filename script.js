@@ -28,8 +28,8 @@ const videoData = {
   ],
   match7: [
     "https://www.youtube.com/embed/lPhFHcAIPeI",
-    "https://www.youtube.com/embed/lPhFHcAIPeI",
-    "https://www.youtube.com/embed/lPhFHcAIPeI"
+    "https://www.youtube.com/embed/JefBnGp9xco",
+    "https://www.youtube.com/embed/xa-4kEK5PdQ"
   ],
   match8: [
     "https://www.youtube.com/embed/tgbNymZ7vqY"
@@ -53,6 +53,7 @@ function closePopup() {
   document.getElementById("videoModal").style.display = "none";
   document.getElementById("videoContainer").innerHTML = "";
 }
+
 
 
 
