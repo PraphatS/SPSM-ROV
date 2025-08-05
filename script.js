@@ -48,11 +48,15 @@ function openPopup(matchKey) {
   const container = document.getElementById("videoContainer");
   container.innerHTML = "";
 
-  videoData[matchKey].forEach(url => {
-    const iframe = document.createElement("iframe");
-    iframe.src = url;
-    container.appendChild(iframe);
-  });
+  if (!videoData[matchKey] || videoData[matchKey].length === 0) {
+    container.innerHTML = `<p style="color:white; font-size: 1.2em; text-align: center;">🎮 วิดีโอสำหรับแมตช์นี้ <strong>Coming Soon</strong>!</p>`;
+  } else {
+    videoData[matchKey].forEach(url => {
+      const iframe = document.createElement("iframe");
+      iframe.src = url;
+      container.appendChild(iframe);
+    });
+  }
 
   document.getElementById("videoModal").style.display = "block";
 }
@@ -61,6 +65,7 @@ function closePopup() {
   document.getElementById("videoModal").style.display = "none";
   document.getElementById("videoContainer").innerHTML = "";
 }
+
 
 
 
