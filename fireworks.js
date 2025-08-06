@@ -70,4 +70,22 @@ function animate() {
     }
   });
 
-  requestAnimationFrame(animat
+  requestAnimationFrame(animate);
+}
+
+function launchFireworks() {
+  const interval = setInterval(() => {
+    fireworks.push(new Firework());
+  }, 300);
+
+  // Stop after 10 seconds
+  setTimeout(() => {
+    clearInterval(interval);
+    setTimeout(() => {
+      canvas.style.display = 'none';
+    }, 1000);
+  }, 10000);
+}
+
+launchFireworks();
+animate();
