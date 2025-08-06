@@ -77,7 +77,7 @@ h1 {
   font-size: 30px;
   cursor: pointer;
 }
-fireworks-canvas {
+#fireworks-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -87,5 +87,6 @@ fireworks-canvas {
   pointer-events: none;
   display: block;
 }
+
 
 
