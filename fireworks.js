@@ -1,15 +1,11 @@
 const canvas = document.getElementById('fireworks-canvas');
 const ctx = canvas.getContext('2d');
-let fireworks = [];
-let particles = [];
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-canvas.style.position = 'fixed';
-canvas.style.top = 0;
-canvas.style.left = 0;
-canvas.style.zIndex = 1000;
-canvas.style.pointerEvents = 'none';
+
+let fireworks = [];
+let particles = [];
 
 function random(min, max) {
   return Math.random() * (max - min) + min;
@@ -19,7 +15,7 @@ function Firework() {
   this.x = random(canvas.width * 0.2, canvas.width * 0.8);
   this.y = canvas.height;
   this.targetY = random(canvas.height * 0.2, canvas.height * 0.5);
-  this.speed = random(3, 5);
+  this.speed = random(3, 6);
   this.color = `hsl(${Math.floor(random(0, 360))},100%,50%)`;
 }
 
@@ -40,7 +36,7 @@ function createParticles(x, y, color) {
 }
 
 function animate() {
-  ctx.fillStyle = "rgba(0,0,0,0.2)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   fireworks.forEach((f, i) => {
@@ -74,22 +70,4 @@ function animate() {
     }
   });
 
-  requestAnimationFrame(animate);
-}
-
-function launchFireworks() {
-  const interval = setInterval(() => {
-    fireworks.push(new Firework());
-  }, 300);
-
-  setTimeout(() => {
-    clearInterval(interval);
-    setTimeout(() => {
-      canvas.style.display = 'none';
-    }, 1000);
-  }, 3000); // 10 วินาที
-}
-
-launchFireworks();
-animate();
-
+  requestAnimationFrame(animat
