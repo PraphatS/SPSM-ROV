@@ -87,8 +87,9 @@ function launchFireworks() {
     setTimeout(() => {
       canvas.style.display = 'none';
     }, 1000);
-  }, 10000); // 10 วินาที
+  }, 3000); // 10 วินาที
 }
 
 launchFireworks();
 animate();
+
