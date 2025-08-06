@@ -32,10 +32,13 @@ const videoData = {
     "https://www.youtube.com/embed/xa-4kEK5PdQ"
   ],
   match9: [
-    "https://www.youtube.com/embed/8ebCGD9X6Y8",
+    "8ebCGD9X6Y8",
     "https://www.youtube.com/embed/20iwhFUEMGk"
   ],
   match10: [
+     "https://www.youtube.com/embed/ohrobVtKjkY?si=QqlkD2rj1vDyFNsi",
+     "https://www.youtube.com/embed/Bf671EU4GA4?si=Gk9Tz6XJMAaclp83"
+    
     
   ],
   match11: [
@@ -65,6 +68,7 @@ function closePopup() {
   document.getElementById("videoModal").style.display = "none";
   document.getElementById("videoContainer").innerHTML = "";
 }
+
 
 
 
